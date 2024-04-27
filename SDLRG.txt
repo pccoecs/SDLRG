@@ -1,0 +1,2539 @@
+       
+       
+       
+       //1. Design a TY Time Table using HTML, CSS/Bootstrap containing Subject 
+               Name, Faculty Initials, Time Slot and Day of the week. 
+
+
+//timetable.html
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TY Time Table</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .table {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mt-3">TY Time Table</h2>
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Time Slot</th>
+          <th>Subject Name</th>
+          <th>Faculty Initials</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Monday</td>
+          <td>10:00 AM - 11:00 AM</td>
+          <td>Web Development</td>
+          <td>JD</td>
+        </tr>
+        <tr>
+          <td>Tuesday</td>
+          <td>11:00 AM - 12:00 PM</td>
+          <td>Database Management</td>
+          <td>SK</td>
+        </tr>
+        <tr>
+          <td>Wednesday</td>
+          <td>9:00 AM - 10:00 AM</td>
+          <td>Software Engineering</td>
+          <td>RS</td>
+        </tr>
+        <tr>
+          <td>Thursday</td>
+          <td>2:00 PM - 3:00 PM</td>
+          <td>Networking</td>
+          <td>MS</td>
+        </tr>
+        <tr>
+          <td>Friday</td>
+          <td>12:00 PM - 1:00 PM</td>
+          <td>Computer Graphics</td>
+          <td>PT</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+
+  // 2. Design a railway Time Table using HTML and CSS.
+  
+//railway_time_table.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Railway Time Table</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center mt-3">Railway Time Table</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Train Number</th>
+          <th>Train Name</th>
+          <th>Departure Time</th>
+          <th>Arrival Time</th>
+          <th>From</th>
+          <th>To</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>12345</td>
+          <td>Express</td>
+          <td>09:00 AM</td>
+          <td>12:00 PM</td>
+          <td>Surat</td>
+          <td>Mumbai</td>
+        </tr>
+        <tr>
+          <td>54321</td>
+          <td>Superfast</td>
+          <td>02:00 PM</td>
+          <td>05:00 PM</td>
+          <td>Chandigarh</td>
+          <td>Jaipur</td>
+        </tr>
+        <tr>
+          <td>67890</td>
+          <td>Local</td>
+          <td>07:00 AM</td>
+          <td>09:00 AM</td>
+          <td>Mumbai</td>
+          <td>Pune</td>
+        </tr>
+        <tr>
+          <td>09876</td>
+          <td>Express</td>
+          <td>03:00 PM</td>
+          <td>06:00 PM</td>
+          <td>Navsari</td>
+          <td>Mumbai</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .table th, .table td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+  }
+  
+  .table th {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #cce5ff;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+  
+  
+            //3. Design a facebook registration form and Apply field level validation using 
+                   javascript for Facebook registration form.
+
+
+//Facebook.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Registration</title>
+    <style>
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    <h1>Facebook Registration</h1>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <span class="error" id="firstNameError"></span><br>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <span class="error" id="lastNameError"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error" id="emailError"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <span class="error" id="passwordError"></span><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <span class="error" id="confirmPasswordError"></span><br>
+
+        <button type="submit">Register</button>
+    </form>
+    
+//script.js
+
+function validateForm() {
+    let valid = true;
+    let firstName = document.getElementById("firstName").value;
+    let lastName = document.getElementById("lastName").value;
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let confirmPassword = document.getElementById("confirmPassword").value;
+    document.getElementById("firstNameError").innerText = "";
+    document.getElementById("lastNameError").innerText = "";
+    document.getElementById("emailError").innerText = "";
+    document.getElementById("passwordError").innerText = "";
+    document.getElementById("confirmPasswordError").innerText = "";
+
+    if (firstName === " ") {
+            document.getElementById("firstNameError").innerText = "First name is required";
+            valid = false;
+        document.getElementById("firstNameError").innerText = "First name is required";
+        valid = false;
+    }
+
+    if (lastName === " ") {
+        document.getElementById("lastNameError").innerText = "Last name is required";
+        valid = false;
+    }
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerText = "Invalid email format";
+        valid = false;
+    }
+
+    if (password.length < 6) {
+        document.getElementById("passwordError").innerText = "Password must be at least 6 characters";
+        valid = false;
+    }
+
+    if (confirmPassword !== password) {
+        document.getElementById("confirmPasswordError").innerText = "Passwords do not match";
+        valid = false;
+    }
+
+    if (valid) {
+        alert("Form submitted successfully!");
+        return true;
+    } else {
+        return false;
+    }
+}
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .invalid-feedback {
+    color: red;
+    display: none;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+
+
+           //4.Design a Registration form for Gmail and Apply Submit level validation 
+                              using javascript . 
+
+
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Registration Form</title>
+    <style>
+        /* Form Style */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        form {
+            width: 300px;
+            margin: 0 auto;
+        }
+
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 style="text-align: center;">Gmail Registration Form</h2>
+
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br>
+        <span id="fullNameError" class="error-message"></span><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required><br>
+        <span id="emailError" class="error-message"></span><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br>
+        <span id="passwordError" class="error-message"></span><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+    <script>
+        function validateForm() {
+            var fullName = document.getElementById("fullName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var isValid = true;
+
+            // Validate Full Name
+            if (fullName == "") {
+                document.getElementById("fullNameError").innerHTML = "Please enter your full name.";
+                isValid = false;
+            } else {
+                document.getElementById("fullNameError").innerHTML = "";
+            }
+
+            // Validate Email
+            if (email == "") {
+                document.getElementById("emailError").innerHTML = "Please enter your email address.";
+                isValid = false;
+            } else if (!validateEmail(email)) {
+                document.getElementById("emailError").innerHTML = "Please enter a valid email address.";
+                isValid = false;
+            } else {
+                document.getElementById("emailError").innerHTML = "";
+            }
+
+            // Validate Password
+            if (password == "") {
+                document.getElementById("passwordError").innerHTML = "Please enter a password.";
+                isValid = false;
+            } else if (password.length < 8) {
+                document.getElementById("passwordError").innerHTML = "Password must be at least 8 characters long.";
+                isValid = false;
+            } else {
+                document.getElementById("passwordError").innerHTML = "";
+            }
+
+            return isValid;
+        }
+
+        // Function to validate email address
+        function validateEmail(email) {
+            var re = /\S+@\S+\.\S+/;
+            return re.test(email);
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+       // 5. Create a 3 page website using HTML and Bootstrap for Online shopping of 
+                                             garments
+ 
+ //contact.HTML
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Garment Store</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Garment Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Page Content -->
+  <div class="container mt-4">
+    <h2>Contact Us</h2>
+    <p>Have a question? Contact us!</p>
+    <form>
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter your email">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea class="form-control" id="message" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Garment Store</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Garment Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Page Content -->
+  <div class="container mt-4">
+    <div class="jumbotron">
+      <h1 class="display-4">Welcome to Garment Store</h1>
+      <p class="lead">Explore our collection of trendy garments at unbeatable prices.</p>
+      <hr class="my-4">
+      <p>Shop now and upgrade your wardrobe!</p>
+      <a class="btn btn-primary btn-lg" href="products.html" role="button">Shop Now</a>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+                                             
+ //products.html                                           
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products - Garment Store</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Garment Store</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Products Page Content -->
+  <div class="container mt-4">
+    <h2 class="mb-4">Our Products</h2>
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Product 1</h5>
+            <p class="card-text">Description of Product 1.</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Product 2</h5>
+            <p class="card-text">Description of Product 2.</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Product 3</h5>
+            <p class="card-text">Description of Product 3.</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>                                     
+
+
+
+                      //6. Design a calculator using javascript. 
+
+//calculator.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="display" class="display" readonly>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('/')">/</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('*')">*</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="appendToDisplay('+')">+</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+//script.js
+
+function appendToDisplay(value) {
+    document.getElementById('display').value += value;
+  }
+  
+  function clearDisplay() {
+    document.getElementById('display').value = '';
+  }
+  
+  function calculate() {
+    var result = eval(document.getElementById('display').value);
+    document.getElementById('display').value = result;
+  }
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .calculator {
+    width: 300px;
+    margin: 100px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .display {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 20px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #e0e0e0;
+  }
+  
+  
+         //7. Link a JS file into a HTML file, put an alert, calculate average number of 
+            weeks in human lifetime, create variables to store a string, program that 
+                tells time of the day (morning, afternoon, night), etc
+  
+  
+  //index.html
+  
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linking JS File</title>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>Linking JS File</h1>
+  <div id="result"></div>
+</body>
+</html>
+
+ //script.JS
+ 
+ alert("JS file linked successfully!");
+
+const averageHumanLifespanYears = 60; 
+const weeksInYear = 52; 
+
+const averageWeeksInLifetime = averageHumanLifespanYears * weeksInYear;
+
+console.log("Average number of weeks in human lifetime:", averageWeeksInLifetime);
+
+const currentHour = new Date().getHours();
+
+function getTimeOfDay(hour) {
+  if (hour >= 5 && hour < 12) {
+    return "morning";
+  } else if (hour >= 12 && hour < 18) {
+    return "afternoon";
+  } else {
+    return "night";
+  }
+}
+
+const timeOfDay = getTimeOfDay(currentHour);
+
+document.getElementById("result").innerHTML = "Average number of weeks in human lifetime: " + averageWeeksInLifetime;
+document.getElementById("result").innerHTML += "<br>Time of the day: " + timeOfDay;
+document.getElementById("result").innerHTML += "<br>Hour of the day: " + currentHour;
+
+
+
+
+                //8. Develop a app using PHP and MySQl for Complaint Management System.
+      
+      
+        
+ //database My MySQl
+ -- First Create a database named complaint_management_system in XAMPP Server under phpMyAdmin
+-- Then run the following SQL commands to create the vehicles table
+
+CREATE DATABASE complaint_management_system;
+
+CREATE TABLE complaints (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    department VARCHAR(255) NOT NULL,
+    complaint TEXT NOT NULL,
+    status ENUM('Pending', 'Resolved') DEFAULT 'Pending',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+//index.php
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complaint Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint Management System</h1>
+        <form action="submit_complaint.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="IT">IT</option>
+                <option value="HR">HR</option>
+                <option value="Finance">Finance</option>
+            </select><br><br>
+
+            <label for="complaint">Complaint:</label><br>
+            <textarea id="complaint" name="complaint" rows="4" required></textarea><br><br>
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+</body>
+</html>
+
+//style.css
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+//submit_complaint.php
+
+<?php
+// Database connection
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$database = "complaint_management_system";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$name = $conn->real_escape_string($_POST['name']);
+$email = $conn->real_escape_string($_POST['email']);
+$department = $conn->real_escape_string($_POST['department']);
+$complaint = $conn->real_escape_string($_POST['complaint']);
+
+// Insert complaint into database
+$sql = "INSERT INTO complaints (name, email, department, complaint) VALUES ('$name', '$email', '$department', '$complaint')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "<script>alert('Complaint submitted successfully!');</script>";
+    echo "<script>window.location.href = 'index.php';</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close connection
+$conn->close();
+?>
+
+//view_complaints.php
+
+<?php
+// Database connection
+$servername = "localhost";
+$username = "username";
+$password = "password";
+$database = "complaint_management_system";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch complaints from database
+$sql = "SELECT * FROM complaints";
+$result = $conn->query($sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Complaints - Complaint Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Complaint Management System</h1>
+        <h2>View Complaints</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Department</th>
+                <th>Complaint</th>
+                <th>Status</th>
+                <th>Created At</th>
+            </tr>
+            <?php
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['name'] . "</td>";
+                    echo "<td>" . $row['email'] . "</td>";
+                    echo "<td>" . $row['department'] . "</td>";
+                    echo "<td>" . $row['complaint'] . "</td>";
+                    echo "<td>" . $row['status'] . "</td>";
+                    echo "<td>" . $row['created_at'] . "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='6'>No complaints found</td></tr>";
+            }
+            ?>
+        </table>
+    </div>
+</body>
+</html>
+
+<?php
+// Close connection
+$conn->close();
+?>
+
+
+               //9. Develop a app using PHP and MySQl for Toll Tax Management System. 
+
+
+//database.SQL
+
+-- First Create a database named toll_tax_management_system in XAMPP Server under phpMyAdmin
+-- Then run the following SQL commands to create the vehicles table
+
+CREATE DATABASE toll_tax_management_system;
+
+CREATE TABLE vehicles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    vehicle_number VARCHAR(20) NOT NULL,
+    vehicle_type ENUM('Car', 'Bus', 'Truck') NOT NULL,
+    toll_amount DECIMAL(10, 2) NOT NULL,
+    payment_status ENUM('Paid', 'Unpaid') DEFAULT 'Unpaid',
+    entry_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+
+//index.PHP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toll Tax Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toll Tax Management System</h1>
+        <form action="submit_vehicle.php" method="POST">
+            <label for="vehicle_number">Vehicle Number:</label>
+            <input type="text" id="vehicle_number" name="vehicle_number" required><br><br>
+
+            <label for="vehicle_type">Vehicle Type:</label>
+            <select id="vehicle_type" name="vehicle_type" required>
+                <option value="Car">Car</option>
+                <option value="Bus">Bus</option>
+                <option value="Truck">Truck</option>
+            </select><br><br>
+
+            <label for="toll_amount">Toll Amount:</label>
+            <input type="text" id="toll_amount" name="toll_amount" required><br><br>
+
+            <button type="submit">Submit Vehicle Details</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+//style.css
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+//submit_vehical.PHP
+
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root"; // Default username for MySQL
+$password = "";     // Default password for MySQL is empty
+$database = "toll_tax_management_system";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Escape user inputs for security
+$vehicle_number = $conn->real_escape_string($_POST['vehicle_number']);
+$vehicle_type = $conn->real_escape_string($_POST['vehicle_type']);
+$toll_amount = $conn->real_escape_string($_POST['toll_amount']);
+
+// Insert vehicle details into database
+$sql = "INSERT INTO vehicles (vehicle_number, vehicle_type, toll_amount) VALUES ('$vehicle_number', '$vehicle_type', '$toll_amount')";
+
+if ($conn->query($sql) === TRUE) {
+    echo "<script>alert('Vehicle details submitted successfully!');</script>";
+    echo "<script>window.location.href = 'index.php';</script>";
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
+
+// Close connection
+$conn->close();
+?>
+
+
+//view_vehicales.PHP
+
+<?php
+// Database connection
+$servername = "localhost";
+$username = "root"; // Default username for MySQL
+$password = "";     // Default password for MySQL is empty
+$database = "toll_tax_management_system";
+
+$conn = new mysqli($servername, $username, $password, $database);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch vehicle details from database
+$sql = "SELECT * FROM vehicles";
+$result = $conn->query($sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Vehicles - Toll Tax Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Toll Tax Management System</h1>
+        <h2>View Vehicle Details</h2>
+        <table>
+            <tr>
+                <th>Vehicle Number</th>
+                <th>Vehicle Type</th>
+                <th>Toll Amount</th>
+                <th>Payment Status</th>
+                <th>Entry Time</th>
+            </tr>
+            <?php
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    echo "<tr>";
+                    echo "<td>" . $row['vehicle_number'] . "</td>";
+                    echo "<td>" . $row['vehicle_type'] . "</td>";
+                    echo "<td>" . $row['toll_amount'] . "</td>";
+                    echo "<td>" . $row['payment_status'] . "</td>";
+                    echo "<td>" . $row['entry_time'] . "</td>";
+                    echo "</tr>";
+                }
+            } else {
+                echo "<tr><td colspan='5'>No vehicles found</td></tr>";
+            }
+            ?>
+        </table>
+    </div>
+</body>
+</html>
+
+<?php
+// Close connection
+$conn->close();
+?>
+
+
+                 //10.Develop a app using PHP and MySQL for Pharmacy Management System.
+                //11.Develop a app using PHP and MySQl for College Admission Management 
+                                   System.  
+                //Both are same                   
+                
+
+              //12. Create simple HTML forms with input elements and a button.
+              
+//index.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple HTML Form</title>
+</head>
+<body>
+    <h1>Simple HTML Form</h1>
+    <form >
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" ><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" ><br><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" ></textarea><br><br>
+
+        <button type="submit" onclick=" return result()">Submit</button>
+    </form>
+</body>
+<script>
+    function result () {
+        if (document.getElementById("name").value == "" || document.getElementById("email").value == "" || document.getElementById("message").value == "") {
+            alert("Please fill all the fields!");
+            return false;
+        }
+        else{
+            alert("Form submitted successfully!");
+        return true;
+        }
+        return false;
+    }
+    </script>
+</html>
+
+
+                   //13. Write Javascript functions that are used as event handlers.
+                   
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handlers</title>
+    <script>
+        // JavaScript function to change text color
+        function changeColor() {
+            document.getElementById("text").style.color = "red";
+        }
+
+        // JavaScript function to display an alert message
+        function showAlert() {
+            alert("Button clicked!");
+        }
+    </script>
+</head>
+<body>
+    <h1>Event Handlers</h1>
+    <button onclick="changeColor()">Change Text Color</button>
+    <p id="text">This is a sample text.</p>
+    <button onclick="showAlert()">Click Me</button>
+</body>
+</html>
+
+
+                    //14.Create Fibonacci series in JavaScript and display on HTML 
+
+//index.HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Series</title>
+    <script>
+        function generateFibonacci() {
+            // Get the number of terms from the input field
+            var numTerms = document.getElementById("numTerms").value;
+
+            // Initialize variables to store Fibonacci series
+            var fib = [];
+            fib[0] = 0;
+            fib[1] = 1;
+
+            // Generate Fibonacci series
+            for (var i = 2; i < numTerms; i++) {
+                fib[i] = fib[i - 1] + fib[i - 2];
+            }
+
+            // Display Fibonacci series on the HTML page
+            document.getElementById("result").innerHTML = "Fibonacci Series: " + fib.join(", ");
+        }
+    </script>
+</head>
+<body>
+    <h1>Fibonacci Series</h1>
+    <label for="numTerms">Enter the number of terms:</label>
+    <input type="number" id="numTerms" name="numTerms" min="1" value="1">
+    <button onclick="generateFibonacci()">Generate Fibonacci Series</button>
+    <p id="result"></p>
+</body>
+</html>
+
+
+
+                //15.Create sign up page and display name after login(username &amp; 
+                             Password) with Validation.
+                
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirmPassword").value;
+
+            // Check if username is empty
+            if (username == "") {
+                alert("Please enter a username.");
+                return false;
+            }
+
+            // Check if password is empty
+            if (password == "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            // Check if password and confirm password match
+            if (password != confirmPassword) {
+                alert("Passwords do not match.");
+                return false;
+            }
+
+            // Validation passed, display username
+            alert("Welcome, " + username + "!");
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sign Up</h1>
+    <form onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+
+        <button type="submit">Sign Up</button>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+                  //16. Create registration form and display the details (firstaname, lastname, 
+                            organization, Hobbies, etc...) With validation
+
+
+                 //17. Create a image gallery using Html ,CSS/Bootstrap
+
+
+//index.Html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .gallery img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Image Gallery</h1>
+        <div class="row gallery">
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 1">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 2">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 3">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 4">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 5">
+            </div>
+            <div class="col-md-4">
+                <img src="https://via.placeholder.com/300" alt="Image 6">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+
+                      //18. Create a page and add video in the page. 
+
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Page</title>
+</head>
+<body>
+    <h1>Video Page</h1>
+    <video width="640" height="360" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>
+
+
+
+                      //19.Create a notification popup. 
+                      
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Popup</title>
+    <style>
+        /* Notification Popup CSS */
+        .popup-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 5px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .popup-container h2 {
+            margin-top: 0;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Notification Popup HTML -->
+    <div class="popup-container" id="popupContainer">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2>Notification</h2>
+        <p>This is a notification popup.</p>
+    </div>
+
+    <button onclick="showPopup()">Show Notification</button>
+
+    <script>
+        // JavaScript function to show notification popup
+        function showPopup() {
+            var popup = document.getElementById("popupContainer");
+            popup.style.display = "block";
+            setTimeout(function(){
+                popup.style.display = "none";
+            }, 3000); // Close popup after 3 seconds
+        }
+
+        // JavaScript function to close notification popup
+        function closePopup() {
+            var popup = document.getElementById("popupContainer");
+            popup.style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
+
+
+                                //20. Create and store the cookies. 
+                                
+//index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Example</title>
+</head>
+<body>
+    <h1>Cookies Example</h1>
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Get Cookie</button>
+    <button onclick="deleteCookie()">Delete Cookie</button>
+
+    <script>
+        // JavaScript function to set a cookie
+        function setCookie() {
+            document.cookie = "username=Dev Govidani; expires=Thu, 18 Dec 2025 12:00:00 UTC; path=/";
+            alert("Cookie set successfully!");
+        }
+
+        // JavaScript function to get a cookie
+        function getCookie() {
+            var cookieValue = document.cookie
+                .split('; ')
+                .find(row => row.startsWith('username='))
+                .split('=')[1];
+            alert("Username: " + cookieValue);
+        }
+
+        // JavaScript function to delete a cookie
+        function deleteCookie() {
+            document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            alert("Cookie deleted successfully!");
+        }
+    </script>
+</body>
+</html>
+
+
+
+                    //21.Design User Registration and login form using Vue.js 
+                    //22.Design Sign Up Registration and login form for Facebook using Vue.js 
+                    //23.Write a vue.js program to create reusable grid components and use it with 
+                                  external data.
+                                  
+                                  
+        
+              //24.Develop a ecommerce platform Ubercart using PHP. 
+              
+//add_product.PHP
+
+<?php
+include 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $description = $_POST["description"];
+    $price = $_POST["price"];
+    $image = $_POST["image"];
+
+    $sql = "INSERT INTO products (name, description, price, image) VALUES ('$name', '$description', '$price', '$image')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+
+    <form method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" required></textarea>
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" required>
+        </div>
+        <div>
+            <label for="image">Image URL:</label>
+            <input type="text" id="image" name="image" required>
+        </div>
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>
+
+
+//config.php
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecommerce";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+
+//database.sql
+
+CREATE DATABASE ecommerce;
+
+USE ecommerce;
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    description TEXT,
+    image VARCHAR(255)
+);
+
+
+//index.php
+
+<?php
+include 'config.php';
+
+$sql = "SELECT * FROM products";
+$result = $conn->query($sql);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Platform</title>
+</head>
+<body>
+    <h1>Welcome to our E-commerce Platform</h1>
+
+    <a href="add_product.php">Add Product</a>
+
+    <?php
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<div>";
+            echo "<h2>" . $row["name"] . "</h2>";
+            echo "<p>" . $row["description"] . "</p>";
+            echo "<p>Price: $" . $row["price"] . "</p>";
+            echo "<img src='" . $row["image"] . "' alt='" . $row["name"] . "' width='200'>";
+            echo "<button>Add to Cart</button>";
+            echo "</div>";
+        }
+    } else {
+        echo "0 results";
+    }
+    $conn->close();
+    ?>
+</body>
+</html>
+
+
+
+                  //25.Build a grocery store application using PHP and MySQL
+                  
+//add_product.PHP
+
+<?php
+include 'config.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $price = $_POST["price"];
+
+    $sql = "INSERT INTO products (name, price) VALUES ('$name', '$price')";
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
+    $conn->close();
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add Product</h1>
+
+    <form method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" min="0" step="0.01" required>
+        </div>
+        <button type="submit">Add Product</button>
+    </form>
+</body>
+</html>
+
+
+//config.PHP
+
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "grocery_store";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+?>
+
+//database.sql
+
+CREATE TABLE products (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    price DECIMAL(10, 2) NOT NULL,
+    quantity INT NOT NULL
+);
+
+//index.PHP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grocery Store</title>
+    <a href="add_product.php">Add Product</a>
+</head>
+<body>
+    <h1>Welcome to our Grocery Store</h1>
+    <h2>Product List</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        <?php
+        // Connect to MySQL
+        $conn = new mysqli("localhost", "root", "", "grocery_store");
+
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+
+        // Fetch products from database
+        $sql = "SELECT * FROM products";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row["id"] . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>$" . $row["price"] . "</td>";
+                echo "</tr>";
+            }
+        } else {
+            echo "<tr><td colspan='4'>No products found</td></tr>";
+        }
+        $conn->close();
+        ?>
+    </table>
+</body>
+</html>
+
+
+
+                  //26.Build a facebook website using PHP and MySQL. 
+
+
+
+//database.sql
+
+-- Open your web browser and go to http://localhost/phpmyadmin.
+-- Click on "New" to create a new database.
+-- Database Name: facebook
+-- Collation: utf8mb4_unicode_ci
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE posts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT,
+    content TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+
+//db.PHP
+
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'facebook';
+
+$conn = mysqli_connect($host, $username, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+//index.PHP
+
+<?php
+session_start();
+require_once 'db.php';
+
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$user_id = $_SESSION['user_id'];
+$query = "SELECT * FROM users WHERE id = $user_id";
+$result = mysqli_query($conn, $query);
+$user = mysqli_fetch_assoc($result);
+
+$query = "SELECT * FROM posts ORDER BY created_at DESC";
+$result = mysqli_query($conn, $query);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Facebook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome, <?php echo $user['username']; ?>!</h1>
+        <a href="logout.php">Logout</a>
+        <form action="post.php" method="post">
+            <textarea name="content" placeholder="What's on your mind?"></textarea>
+            <button type="submit">Post</button>
+        </form>
+        <div class="posts">
+            <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                <div class="post">
+                    <p><?php echo $row['content']; ?></p>
+                    <span><?php echo $row['created_at']; ?></span>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</body>
+
+</html>
+
+//login.PHP
+
+<?php
+session_start();
+require_once 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    $query = "SELECT * FROM users WHERE email = '$email'";
+    $result = mysqli_query($conn, $query);
+    $user = mysqli_fetch_assoc($result);
+
+    if ($user && password_verify($password, $user['password'])) {
+        $_SESSION['user_id'] = $user['id'];
+        header("Location: index.php");
+        exit;
+    } else {
+        $error = "Invalid email or password";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <?php if (isset($error)) : ?>
+            <p><?php echo $error; ?></p>
+        <?php endif; ?>
+        <form action="" method="post">
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="register.php">Register</a></p>
+    </div>
+</body>
+
+</html>
+
+
+//logout.PHP
+
+<?php
+session_start();
+session_unset();
+session_destroy();
+header("Location: login.php");
+exit;
+?>
+
+
+//post.php
+
+<?php
+session_start();
+require_once 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user_id = $_SESSION['user_id'];
+    $content = $_POST['content'];
+
+    $query = "INSERT INTO posts (user_id, content) VALUES ($user_id, '$content')";
+    mysqli_query($conn, $query);
+
+    header("Location: index.php");
+    exit;
+}
+?>
+
+
+//register.php
+
+<?php
+require_once 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $email = $_POST['email'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+    $query = "INSERT INTO users (username, email, password) VALUES ('$username', '$email', '$password')";
+    mysqli_query($conn, $query);
+
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form action="" method="post">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.posts {
+    margin-top: 20px;
+}
+
+.post {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.post p {
+    margin: 0;
+}
+
+.post span {
+    font-size: 12px;
+    color: #888;
+}
+
+
+
+                //27.Create a database with user information and books information and create 
+                     a webpage in which books catalogue should be dynamically loaded from 
+                     the database.
+                     
+//database.sql
+
+-- Open your web browser and go to http://localhost/phpmyadmin.
+-- Click on "New" to create a new database.
+-- Database Name: library
+-- Collation: utf8mb4_unicode_ci
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    author VARCHAR(255) NOT NULL,
+    description TEXT,
+    image VARCHAR(255)
+);
+
+INSERT INTO books (title, author, description, image) VALUES 
+('Book 1', 'Author 1', 'Description of Book 1', 'book1.jpg'),
+('Book 2', 'Author 2', 'Description of Book 2', 'book2.jpg'),
+('Book 3', 'Author 3', 'Description of Book 3', 'book3.jpg');
+
+
+//db.php
+
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'library';
+
+$conn = mysqli_connect($host, $username, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+
+//index.php
+
+<?php
+require_once 'db.php';
+
+$query = "SELECT * FROM books";
+$result = mysqli_query($conn, $query);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Library Catalog</h1>
+        <div class="books">
+            <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                <div class="book">
+                    <img src="images/<?php echo $row['image']; ?>" alt="<?php echo $row['title']; ?>">
+                    <h2><?php echo $row['title']; ?></h2>
+                    <h3>By <?php echo $row['author']; ?></h3>
+                    <p><?php echo $row['description']; ?></p>
+                </div>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+.books {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+
+.book {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.book img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.book h2 {
+    margin-top: 0;
+}
+
+.book h3 {
+    margin-top: 5px;
+    color: #888;
+}
+
+.book p {
+    margin: 10px 0;
+}
+
+
+
+                          //28.Develop email verification application using PHP. 
+                          
+                          
+                          //29.Develop Web application which makes use of PHP programming 
+                          
+//add.PHP
+
+<?php
+require_once 'db.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    $query = "INSERT INTO users (name, email) VALUES ('$name', '$email')";
+    mysqli_query($conn, $query);
+
+    header("Location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Add User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add User</h1>
+        <form action="" method="post">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+//database.sql
+
+-- Open your web browser and go to http://localhost/phpmyadmin.
+-- Click on "New" to create a new database.
+-- Database Name: crud_app
+-- Collation: utf8mb4_unicode_ci
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL
+);
+
+
+//db.PHP
+
+<?php
+$host = 'localhost';
+$username = 'root';
+$password = '';
+$database = 'crud_app';
+
+$conn = mysqli_connect($host, $username, $password, $database);
+
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
+
+//delete.PHP
+
+<?php
+require_once 'db.php';
+
+$id = $_GET['id'];
+$query = "DELETE FROM users WHERE id = $id";
+mysqli_query($conn, $query);
+
+header("Location: index.php");
+exit;
+?>
+
+
+//edit.PHP
+
+<?php
+require_once 'db.php';
+
+$id = $_GET['id'];
+$query = "SELECT * FROM users WHERE id = $id";
+$result = mysqli_query($conn, $query);
+$user = mysqli_fetch_assoc($result);
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+
+    $query = "UPDATE users SET name = '$name', email = '$email' WHERE id = $id";
+    mysqli_query($conn, $query);
+
+    header("Location: index.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Edit User</h1>
+        <form action="" method="post">
+            <input type="text" name="name" placeholder="Name" value="<?php echo $user['name']; ?>" required>
+            <input type="email" name="email" placeholder="Email" value="<?php echo $user['email']; ?>" required>
+            <button type="submit">Update</button>
+        </form>
+    </div>
+</body>
+
+</html>
+
+
+//index.PHP
+
+<?php
+require_once 'db.php';
+
+$query = "SELECT * FROM users";
+$result = mysqli_query($conn, $query);
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CRUD Application</h1>
+        <a href="add.php" class="btn">Add User</a>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                    <tr>
+                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['email']; ?></td>
+                        <td>
+                            <a href="edit.php?id=<?php echo $row['id']; ?>" class="btn">Edit</a>
+                            <a href="delete.php?id=<?php echo $row['id']; ?>" class="btn">Delete</a>
+                        </td>
+                    </tr>
+                <?php endwhile; ?>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
+
+
+//style.css
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+
+                //30.Design restaurant data entry form using Table Layout and show different 
+                        events using activity class. 
+                //31.Create a Web Site to register a user and validate user’s input using Asp 
+                            .Net. 
+                //32.Design UI and perform CRUD operations on Mysql using ASP.NET 
+                
+                
+                
+                
+                //33.Install Ruby Environment Setup and Write a Ruby program which accept 
+                the user's first and last name and print them in reverse order with a space 
+                    between them
+                    
+                    
+//ruby_name_reverse.rb
+
+# Ruby program to accept first and last name from the user
+# and print them in reverse order with a space between them
+
+puts "Enter your first name: "
+first_name = gets.chomp
+
+puts "Enter your last name: "
+last_name = gets.chomp
+
+full_name = "#{last_name} #{first_name}"
+puts "Your name in reverse order is: #{full_name}"
+
+
+
+
+                 //34.Write a Ruby Script to send an Email to a specific User. 
+                 
+
+require 'mail'
+#Set up SMTP settings
+Mail.defaults do
+ delivery_method :smtp, 
+ {
+ address: 'smtp.gmail.com',
+ port: 587,
+ domain: 'smtp.gmail.com',
+ user_name: 'hirelink06@gmail.com',
+ password: 'nfrp fspj hrxx jdof',
+ authentication: :plain,
+ enable_starttls_auto: true
+ }
+end
+# Email details
+from_email = 'hirelink06@gmail.com'
+to_email = 'payal.mulik21@pccoepune.org'
+subject = 'sdl submission'
+body = 'Sdl assignment 9 submitted succesfully.'
+# Create the email
+mail = Mail.new do
+ from from_email
+ to to_email
+ subject subject
+ body body
+end
+# Send the email
+begin
+ mail.deliver!
+ puts "Email sent successfully."
+rescue StandardError => e
+ puts "Error sending email: #{e.message}"
+end
